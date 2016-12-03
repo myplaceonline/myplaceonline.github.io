@@ -6,6 +6,8 @@
     <script>
       window.onerror = function(msg, url, line, colno, errorObj) {
         console.log(errorObj.stack);
+        console.log(errorObj.toSource());
+        console.log(errorObj.toString());
         console.dir(errorObj);
       };
     </script>
