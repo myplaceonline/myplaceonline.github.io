@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <script>
       window.onerror = function(msg, url, line, colno, errorObj) {
+        console.log("Stack:");
         console.log(errorObj.stack);
+        console.log("toSource:");
         console.log(errorObj.toSource());
+        console.log("toString:");
         console.log(errorObj.toString());
+        console.log("Dir:");
         console.dir(errorObj);
       };
     </script>
