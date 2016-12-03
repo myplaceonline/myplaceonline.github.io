@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test eval error</title>
+    <meta charset="UTF-8">
+    <script>
+      window.onerror = function(msg, url, line, colno, errorObj) {
+        console.log(errorObj.stack);
+      };
+    </script>
+  </head>
+  <body>
+    <p><button onclick="eval('var x = null; x.getComputedStyle();'">Go</button></p>
+  </body>
+</html>
